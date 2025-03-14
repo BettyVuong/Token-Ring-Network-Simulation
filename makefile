@@ -3,7 +3,7 @@ CFLAGS		= -pedantic -Wall
 
 EXE		= tokensim
 
-TARFILE		= VuongBettyA2.tar
+TARFILE		= VuongBettyA3.tar
 
 OBJS		= \
 		tokenRing_main.o \
