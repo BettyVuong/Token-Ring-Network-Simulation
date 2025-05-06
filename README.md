@@ -1,8 +1,4 @@
-# Assignment 3 - Threads and Processes
-## CIS\*3110/Operating Systems W25
-### Name: Betty Vuong
-### Date: 03/17/25
-### Student ID: 1271673
+# Token Ring Network Simulation
 
 --------------------------------------------------------------------
 The program simulates a token ring network using threads and semaphores to manage the communication of the nodes from the token ring. Each node is a thread of the process where the semaphores control the communication. For each thread to be in control and access the data packet, the thread must have the token where token = '1', indicating that it is the threads turn and could utilize send_pkt() if the thread choses to do so according to the data to transmit the data packet. If the thread is transmitting the send_pkt(), token_node() will loop and call send_pkt() until there is no data left to transmit ensuring synchronization. Otherwise the thread will pass the byte through the shared memory using send_byte() and retransmitting the bytes through the switch cases in token_node(). Throughout the checks, once the nodes are all transmitted, the nodes will wait for a terminate flag which will synchronize the parent thread and exit.
